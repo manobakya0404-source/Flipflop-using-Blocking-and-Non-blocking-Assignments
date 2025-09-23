@@ -52,6 +52,7 @@ T FF
 
 RTL Code:
 D SS:
+```
 module dff_block(clk,rst,d,dout);
     input clk,rst,d;
     output reg dout;
@@ -63,7 +64,9 @@ module dff_block(clk,rst,d,dout);
             dout = d;
      end
 endmodule
+```
 SR FF:
+```
 module sr_ff (
     input clk,
     input s,
@@ -81,7 +84,9 @@ module sr_ff (
         endcase
     end
 endmodule
+```
 JK FF:
+```
 module jk_ff (
     input clk,
     input j,
@@ -99,7 +104,9 @@ module jk_ff (
         endcase
     end
 endmodule
+```
 T FF:
+```
 module jk_ff (
     input clk,
     input j,
@@ -117,9 +124,10 @@ module jk_ff (
         endcase
     end
 endmodule
-
+```
 TestBench:
 D SS:
+```
 module dff_block_tb;
     reg clk_t,rst_t,d_t;
     wire dout_t;
@@ -137,7 +145,9 @@ module dff_block_tb;
      always 
         #10 clk_t = ~clk_t;
 endmodule
+```
 SR FF:
+```
 module tb_sr_ff;
     reg clk, s, r;
     wire q;
@@ -159,7 +169,9 @@ module tb_sr_ff;
         $stop;
     end
 endmodule
+```
 JK FF:
+```
 module tb_jk_ff;
     reg clk, j, k;
     wire q;
@@ -182,8 +194,9 @@ module tb_jk_ff;
         $stop;
     end
 endmodule
-
+```
 T FF:
+```
 module tb_jk_ff;
     reg clk, j, k;
     wire q;
@@ -206,7 +219,7 @@ module tb_jk_ff;
         $stop;
     end
 endmodule
-
+```
 Output waveform:
 D FF
  <img width="1919" height="1199" alt="Screenshot 2025-09-16 162702" src="https://github.com/user-attachments/assets/d71bdc48-51d3-48bb-a264-d9d450ec72b9" />
